@@ -57,7 +57,9 @@ A user should be able to:
 * Modals for adding/editing notes
 
 #### Sprint 4: 
-> Bonuses:
+> Bonuses: 
+
+
 A user should be able to:
 * Navigate to “/” to see a basic landing page with 
 ** Name of app
