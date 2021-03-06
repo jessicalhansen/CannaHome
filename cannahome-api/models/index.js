@@ -6,12 +6,12 @@ mongoose.connect(connectionString, {
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 })
-    .then(() => console.log('MongoDB connected successfully.'))
+    .then(() => console.log('MongoDB connected successfully'))
     .catch((err) => console.log(err));
 
-    module.exports = {
-        Plant: require('./Plant'),
-        Watering: require('./Watering'),
-    };
+module.exports = {
+    Plant: require('./Plant'),
+    Watering: require('./Watering'),
+};
