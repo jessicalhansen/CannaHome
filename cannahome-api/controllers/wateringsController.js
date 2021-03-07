@@ -16,7 +16,6 @@ const show = (req, res) => {
 
 const create = (req, res) => {
     console.log(req.body);
-    
     db.Watering.create(req.body, (err, newWatering) => {
         if (err) return console.log(err);
         db.Plant.findByIdAndUpdate(

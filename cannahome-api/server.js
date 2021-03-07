@@ -17,6 +17,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/plants', routes.plants);
-app.use('api/v1/waterings', routes.waterings);
+app.use('/api/v1/waterings', routes.waterings);
 
 app.listen(PORT, () => console.log(`Listening to port ${PORT}`));
