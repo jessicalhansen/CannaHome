@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    background-color: #FEF3C7;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-bar {
+    height: 5vh;
+    background-color: white;
+}
+.plant-card {
+    
+}
+
+#footer {
+    width: 100%;
+}

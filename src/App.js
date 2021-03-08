@@ -4,7 +4,7 @@ import Routes from './config/routes';
 
 function App() {
   return (
-    <div className="container">
+    <div className="app">
       <NavBar />
       <div className="app-routes">
         <Routes />
