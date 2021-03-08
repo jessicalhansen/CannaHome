@@ -7,7 +7,7 @@ function NavBar () {
                 <div className="flex">
                     <NavLink exact to="/" 
                     id="logo" 
-                    className="logo p-0 mx-1">
+                    className="logo p-0 mx-3">
                         CannaHome
                     </NavLink>
                 </div>

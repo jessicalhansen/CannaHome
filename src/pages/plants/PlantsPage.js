@@ -1,4 +1,5 @@
 import React from 'react';
+import PlantsList from '../../components/plants/PlantsList';
 
 class PlantsPage extends React.Component {
     state = {
@@ -23,6 +24,9 @@ class PlantsPage extends React.Component {
         return (
             <div className="main-plant-area">
                 <h1>Plants Page</h1>
+                <PlantsList 
+                plants={this.state.plants}
+                />
             </div>
         )
     }
