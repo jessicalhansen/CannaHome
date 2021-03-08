@@ -1,13 +1,15 @@
-import { Link } from 'react-router-dom';
+import NavBar from './components/uniComps/NavBar';
+import Footer from './components/uniComps/Footer';
 import Routes from './config/routes';
 
 function App() {
   return (
     <div className="container">
+      <NavBar />
       <div className="app-routes">
         <Routes />
-        {/* <h1>CannaHome</h1> */}
       </div>
+      <Footer />
     </div>
   );
 }
