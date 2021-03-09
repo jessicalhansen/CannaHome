@@ -24,9 +24,9 @@ class PlantsPage extends React.Component {
         return (
             <div className="main-plant-area">
                 <h1>Plants Page</h1>
-                <div className="plantlist-area bg-lime-50">
-                    <h2 className="text-3xl text-center">My Plants:</h2>
-                    <div className="flex flex-row flex-wrap">
+                <div className="plantlist-area bg-lime-50 rounded">
+                    <h2 className="text-3xl text-center m-2 underline">My Plants:</h2>
+                    <div className="plant-list flex flex-row flex-wrap rounded bg-lime-50">
                     <PlantsList 
                     plants={this.state.plants} />
                     </div>

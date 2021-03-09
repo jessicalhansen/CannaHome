@@ -9,7 +9,8 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
+    font-family: 'Comfortaa', cursive;
+    overflow: hidden;
 }
 
 #app {
@@ -17,19 +18,25 @@ body {
 }
 
 .nav-bar {
-    height: 6vh;
+    min-height: 6vh;
     background-color: white;
     border-bottom: 3px solid #0C8100;
 }
 
 .main-plant-area {
  padding: 0.5em;
+ height: 90.5vh;
+ 
 }
 
 .plantlist-area {
-    max-width: 50vw;
+    max-width: 47vw;
     padding: 2px;
+    height: 85vh;
+    overflow: hidden;
+    border: 3px solid #0C8100;
 }
+
 
 .plant-card {
     padding: 7px;
@@ -49,7 +56,7 @@ body {
 }
 
 .newplant-form-area {
-    width: 60vw;
+    width: 55vw;
     height: 85vh;
 }
 
@@ -68,5 +75,7 @@ body {
 
 #footer {
     border-radius: 1px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
 }

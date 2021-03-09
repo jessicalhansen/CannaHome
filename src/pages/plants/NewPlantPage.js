@@ -53,14 +53,14 @@ class NewPlantPage extends React.Component {
     render() {
         return (
             <div className="newplant-area text-center">
-                <h2>Add A New Plant:</h2>
+                <h2 className="text-2xl font-medium m-2">Add A New Plant:</h2>
 
                 <div className="newplant-form-area">
                     <form onSubmit={this.handleSubmitPlant} className="newplant-form text-center rounded bg-white">
                         <div>
                             <label htmlFor="plantName">Plant Name:</label> <br />
                             <input 
-                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200"
+                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200 focus:outline-white"
                             type="text" 
                             id="plantName" 
                             name="plantName" 
@@ -71,7 +71,7 @@ class NewPlantPage extends React.Component {
                         <div>
                             <label htmlFor="plantType">Plant Type:</label> <br />
                             <input 
-                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200"
+                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200 focus:outline-white"
                             type="text" 
                             id="plantType" 
                             name="plantType" 
@@ -81,7 +81,7 @@ class NewPlantPage extends React.Component {
                         <div>
                             <label htmlFor="plantStrain">Plant Strain:</label> <br />
                             <input 
-                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200"
+                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200 focus:outline-white"
                             type="text" 
                             id="plantStrain" 
                             name="plantStrain" 
@@ -91,7 +91,7 @@ class NewPlantPage extends React.Component {
                         <div>
                             <label htmlFor="propagationType">Propagation Type:</label> <br />
                             <input 
-                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200"
+                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200 focus:outline-white"
                             type="text" 
                             id="propagationType" 
                             name="propagationType" 
@@ -101,7 +101,7 @@ class NewPlantPage extends React.Component {
                         <div>
                             <label htmlFor="growStage">Grow Stage:</label> <br />
                             <input 
-                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200"
+                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200 focus:outline-white"
                             type="text" 
                             id="growStage" 
                             name="growStage" 
@@ -111,7 +111,7 @@ class NewPlantPage extends React.Component {
                         <div>
                             <label htmlFor="lightCycle">Light Cycle:</label> <br />
                             <input 
-                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200"
+                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200 focus:outline-white"
                             type="text" 
                             id="lightCycle" 
                             name="lightCycle" 
@@ -121,7 +121,7 @@ class NewPlantPage extends React.Component {
                         <div>
                             <label htmlFor="plantingDate">Date Planted:</label> <br />
                             <input 
-                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200"
+                            className="pltfrm rounded mb-2 bg-lime-100 focus:bg-lime-200 focus:outline-white"
                             type="text" 
                             id="plantingDate" 
                             name="plantingDate" 
@@ -131,7 +131,7 @@ class NewPlantPage extends React.Component {
                         <div>
                             <label htmlFor="notes">Notes:</label> <br />
                             <input 
-                            className="pltfrm rounded mb-1 bg-lime-100 focus:bg-lime-200"
+                            className="pltfrm rounded mb-1 bg-lime-100 focus:bg-lime-200 focus:outline-white"
                             type="text" 
                             id="notes" 
                             name="notes" 
