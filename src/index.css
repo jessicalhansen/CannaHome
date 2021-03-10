@@ -31,9 +31,9 @@ body {
     height: 60px;
 }
 
+
 .main-plant-area {
  height: 95vh;
- /* box-sizing: border-box; */
  
 }
 
@@ -99,6 +99,7 @@ body {
 .waterings-area {
     height: 39%;
     margin: 8px;
+    overflow: auto;
 }
 
 .waterings-card {

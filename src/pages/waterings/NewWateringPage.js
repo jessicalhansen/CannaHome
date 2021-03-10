@@ -6,8 +6,6 @@ class NewWateringPage extends React.Component {
         incNutrients: '',
     };
 
-
-
     handleNewWatering = (event) => {
         this.setState({
             ...this.state,

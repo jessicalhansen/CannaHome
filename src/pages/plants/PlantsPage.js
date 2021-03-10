@@ -21,24 +21,6 @@ class PlantsPage extends React.Component {
         waterings: [],
     };
 
-    // componentDidMount() {
-    //     Promise.all(
-    //         []
-    //     )
-    //         fetch('http://localhost:4000/api/v1/plants')
-    //     .then((response) => response.json())
-    //     .then((jsonData) => {
-    //         console.log(jsonData);
-    //         this.setState({
-    //             ...this.state,
-    //             plants: jsonData,
-                
-    //         });
-    //     })
-    //     .catch((err) => console.log(err))
-    // }
-
-
     componentDidMount() {
         fetch('http://localhost:4000/api/v1/plants')
         .then((response) => response.json())
