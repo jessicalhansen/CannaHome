@@ -22,15 +22,15 @@ Medicine should be accessible for all. As more states legalize medical and recre
 #### Sprint 1: Plant CRUD
 A user should be able to:
 * View a main page, including
-** A sitewide header
-** Previously added plants
+* A sitewide header
+* Previously added plants
 * Ability to add a new plant
 * Click on a plant to view:
 * Plant details
 * Click “edit” on any individual plant, and be redirected to the edit form.
 * Click “delete” on any individual plant
-** See a pop-up warning that asks user to confirm deletion
-** If user confirms, delete the plant
+* See a pop-up warning that asks user to confirm deletion
+* If user confirms, delete the plant
 > Bonus: 
 * Plants sorted by date planted
 * Modals for adding and editing plants
@@ -38,15 +38,15 @@ A user should be able to:
 #### Sprint 2: Watering Crud
 A user should be able to:
 * View a list of waterings on the plant detail page
-** See watering date
-** See if nutrients were included
+* See watering date
+* See if nutrients were included
 * Click on “Add a new watering” to pull up a new watering form.
 * Add a new watering for an individual plant.
 * Verify that a new watering is successfully tracked for the correct plant.
 * Click “edit” to edit the watering details
 * Click “delete” on any individual watering
-** See a pop-up warning that asks user to confirm deletion
-** If user confirms, delete the watering
+* See a pop-up warning that asks user to confirm deletion
+* If user confirms, delete the watering
 > Bonus: 
 * Sort watering by date
 * Modals for adding/editing watering
@@ -54,14 +54,14 @@ A user should be able to:
 #### Sprint 3: Plant notes
 A user should be able to:
 * View plant notes in plant details, in a separate component
-** Including timestamp
+* Including timestamp
 * Click on “Add a new note” to pull up a new note form.
 * Add a new note for an individual plant.
 * Verify that a new note is successfully tracked for the correct plant.
 * Click “edit” to edit the note content
 * Click “delete” on any individual note
-** See a pop-up warning that asks user to confirm deletion
-** If user confirms, delete the note
+* See a pop-up warning that asks user to confirm deletion
+* If user confirms, delete the note
 > Bonus:
 * Notes sorted by date
 * Modals for adding/editing notes
@@ -72,11 +72,11 @@ A user should be able to:
 
 A user should be able to:
 * Navigate to “/” to see a basic landing page with 
-** Name of app
-** Links to login/sign up
+* Name of app
+* Links to login/sign up
 * Sign up for an account
 * Log into their account
-** Be redirected to their plant page after logging in. 
+* Be redirected to their plant page after logging in. 
 * Add ability to add plant photos
 * Implement third party API to autofill and provide plant information. 
 
