@@ -1,4 +1,7 @@
 # CannaHome
+Grow your medicine!
+
+![cannahomesmall](https://media.git.generalassemb.ly/user/32534/files/94b60880-8195-11eb-9615-d256948456f7)
 
 ### Scope: 
 Medicine should be accessible for all. As more states legalize medical and recreational use of cannabis, and federal decriminalization on the eventual horizon, more cannabis users are turning to supplying their own medicine. CannaHome provides users an easy and reliable way  to track their plants, watering schedule, and the nutrients provided in their routine. Grow your own at home!
