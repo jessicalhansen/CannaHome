@@ -9,7 +9,7 @@ const PlantCard = (props) => {
                 <p>{props.plant.growStage}</p>
                 <p className="font-semibold">Date planted: </p>
                 <p className="text-sm">{plantingDate}</p>
-                <button className="add-water-btn bg-cyan-50 hover:bg-lightBlue-400 rounded font-semibold">Add Watering</button>
+                <button className="viewplant-btn bg-green-50 hover:bg-lime-400 rounded font-semibold">View Details</button>
             </div>
         </>
     );

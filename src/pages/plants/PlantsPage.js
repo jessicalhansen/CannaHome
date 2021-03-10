@@ -1,9 +1,22 @@
 import React from 'react';
 import PlantsList from '../../components/plants/PlantsList';
+import PlantDetailPage from '../plants/PlantDetailPage';
 
 class PlantsPage extends React.Component {
     state = {
         plants: [],
+        plant: {
+            id: '',
+            plantName: '',
+            plantType: '',
+            plantStrain: '',
+            propagationType: '',
+            growStage: '',
+            lightCycle: '',
+            plantingDate: '',
+            notes: '',
+        },
+        waterings: [],
     };
 
     componentDidMount() {
@@ -19,18 +32,46 @@ class PlantsPage extends React.Component {
         .catch((err) => console.log(err))
     }
 
+    showPlantHandler = (data) => {
+        fetch(`http://localhost:4000/api/v1/plants/filter/${data.id}`)
+            .then((response) => response.json())
+            .then((jsonData) => {
+                this.setState({
+                    plant: data,
+                    waterings: jsonData,
+                });
+            })
+            .catch((err) => {
+                console.log('Plant Handler Error');
+                console.log(err);
+            });
+    };
 
     render() {
         return (
             <div className="main-plant-area">
                 <h1>Plants Page</h1>
-                <div className="plantlist-area bg-lime-50 rounded">
-                    <h2 className="text-3xl text-center m-2 underline">My Plants:</h2>
-                    <div className="plant-list flex flex-row flex-wrap rounded bg-lime-50">
-                    <PlantsList 
-                    plants={this.state.plants} />
+                <div className="mainplant-flexarea flex flex-row justify-around">
+                    <div className="plantlist-area bg-lime-50 rounded ml-2 mr-1">
+                        <h2 className="text-3xl text-center m-2 underline">
+                        My Plants:
+                        </h2>
+                        <div className="plant-list flex flex-row flex-wrap rounded justify-evenly bg-lime-50 p-3">
+                        <PlantsList 
+                            plants={this.state.plants} 
+                            showPlantHandler={this.showPlantHandler}
+                        />
+                        </div>
                     </div>
+                <div className="main-plantdetail-area bg-rose-400 ml-1 mr-2 rounded">
+                    <h2 className="text-3xl">
+                        Details for: {this.state.plant.plantName}
+                    </h2>
+                    <PlantDetailPage 
+                        plant={this.state.plant}
+                    />
                 </div>
+                </div> 
             </div>
         )
     }
