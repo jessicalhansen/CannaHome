@@ -33,14 +33,17 @@ const PlantCard = (props) => {
                 <p>{props.plant.growStage}</p>
                 <p className="font-bold">Date planted: </p>
                 <p className="text-sm">{plantingDate}</p>
+                
                 <Link to={`/edit-plant/${props.plant._id}`}>
                     <button className="editplant-btn p-1 rounded border-2 border-amber-400 bg-amber-50">
                     Edit
                     </button>
-                    <button className="deleteplant-btn p-1 m-1 rounded border-2 border-red-500 bg-red-50">
+                </Link>
+                    <button 
+                    onClick={() => props.deletePlant(props.plant._id)}
+                    className="deleteplant-btn p-1 m-1 rounded border-2 border-red-500 bg-red-50">
                         Delete
                     </button>
-                </Link>
             </div>
         </Link>
         </>

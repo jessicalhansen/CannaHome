@@ -9,6 +9,7 @@ const PlantsList = (props) => {
                     key={plantsObj._id} 
                     plant={plantsObj}
                     showPlantHandler={props.showPlantHandler} 
+                    deletePlant={props.deletePlant}
                 />
                 </div> 
             </div>

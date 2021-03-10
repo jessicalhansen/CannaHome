@@ -48,6 +48,32 @@ class PlantsPage extends React.Component {
             });
     };
 
+    handleDeletePlant = (plantId) => {
+        console.log(plantId);
+        let confirmed = window.confirm(
+            'Are you sure you want to delete this plant?'
+        );
+        if (confirmed) {
+            fetch(`http://localhost:4000/api/v1/plants/${plantId}`, {
+                method: 'DELETE'
+            })
+                .then((response) => {
+                    return response.json();
+                })
+                .then(() => {
+                    const stateCopy = {...this.state};
+                    const updatedState = stateCopy.plants.filter((plantObj) => {
+                        return plantObj._id !== plantId
+                    });
+                    this.setState({
+                        ...this.state,
+                        games: updatedState
+                    });
+                })
+                .catch((err) => console.log(err));
+        }
+    }
+
     render() {
         return (
             <div className="main-plant-area">
@@ -61,6 +87,7 @@ class PlantsPage extends React.Component {
                         <PlantsList 
                             plants={this.state.plants} 
                             showPlantHandler={this.showPlantHandler}
+                            deletePlant={this.handleDeletePlant}
                         />
                         </div>
                     </div>
@@ -70,6 +97,7 @@ class PlantsPage extends React.Component {
                     </h2>
                     <PlantDetailPage 
                         plant={this.state.plant}
+                        deletePlant={this.handleDeletePlant}
                     />
                 </div>
                 </div> 
