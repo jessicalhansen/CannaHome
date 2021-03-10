@@ -5,8 +5,8 @@ const PlantDetailCard = (props) => {
                 <div className="flex">
                     <div className="plant-detail container">
                         <h2 className="text-2xl font-bold">
-                            {props.plant.plantName} details:
-                        </h2> <hr />
+                            {props.plant.plantName}
+                        </h2> 
                         <p>Plant type: {props.plant.plantType}</p>
                         <p>Plant strain: {props.plant.plantStrain}</p>
                     </div>

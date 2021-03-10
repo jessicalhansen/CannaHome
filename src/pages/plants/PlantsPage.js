@@ -33,12 +33,13 @@ class PlantsPage extends React.Component {
     }
 
     showPlantHandler = (data) => {
-        fetch(`http://localhost:4000/api/v1/plants/filter/${data.id}`)
+        fetch(`http://localhost:4000/api/v1/plants/${data.id}`)
             .then((response) => response.json())
             .then((jsonData) => {
+                console.log(jsonData);
                 this.setState({
                     plant: data,
-                    waterings: jsonData,
+                    // waterings: jsonData,
                 });
             })
             .catch((err) => {
