@@ -6,7 +6,8 @@ const PlantDetailPage = (props) => {
                 <div className="plantdetail-card-area">
                     <PlantDetailCard
                     plant={props.plant}
-                    key={props.plant}
+                    key={props.plant._id}
+                    deletePlant={props.deletePlant}
                     />
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import PlantsList from '../../components/plants/PlantsList';
 import PlantDetailPage from '../plants/PlantDetailPage';
+import WateringsList from '../../components/waterings/WateringsList';
 
 class PlantsPage extends React.Component {
     state = {
@@ -38,8 +39,9 @@ class PlantsPage extends React.Component {
             .then((jsonData) => {
                 console.log(jsonData);
                 this.setState({
+                    ...this.state,
                     plant: data,
-                    waterings: jsonData,
+                    waterings: jsonData.waterings,
                 });
             })
             .catch((err) => {
@@ -67,7 +69,7 @@ class PlantsPage extends React.Component {
                     });
                     this.setState({
                         ...this.state,
-                        games: updatedState
+                        plants: updatedState
                     });
                 })
                 .catch((err) => console.log(err));
@@ -76,14 +78,13 @@ class PlantsPage extends React.Component {
 
     render() {
         return (
-            <div className="main-plant-area">
-                <h1>Plants Page</h1>
+            <div className="main-plant-area py-5 px-1">
                 <div className="mainplant-flexarea flex flex-row justify-around">
-                    <div className="plantlist-area bg-lime-50 rounded ml-2 mr-1">
+                    <div className="plantlist-area bg-white rounded ml-2 mr-1">
                         <h2 className="text-3xl text-center m-2 underline">
                         My Plants:
                         </h2>
-                        <div className="plant-list flex flex-row flex-wrap rounded justify-evenly bg-lime-50 p-3">
+                        <div className="plant-list flex flex-row flex-wrap rounded justify-evenly p-3">
                         <PlantsList 
                             plants={this.state.plants} 
                             showPlantHandler={this.showPlantHandler}
@@ -91,7 +92,7 @@ class PlantsPage extends React.Component {
                         />
                         </div>
                     </div>
-                <div className="main-plantdetail-area bg-rose-400 ml-1 mr-2 rounded">
+                <div className="main-plantdetail-area bg-white ml-1 mr-2 rounded">
                     <h2 className="text-3xl text-center m-2 underline">
                         Plant Details
                     </h2>
@@ -99,6 +100,12 @@ class PlantsPage extends React.Component {
                         plant={this.state.plant}
                         deletePlant={this.handleDeletePlant}
                     />
+                    <div className="waterings-area text-center my-2 bg-cyan-200">
+                    <h2>Waterings Area</h2>
+                    <WateringsList 
+                        waterings={this.state.waterings}
+                    />
+                    </div>
                 </div>
                 </div> 
             </div>

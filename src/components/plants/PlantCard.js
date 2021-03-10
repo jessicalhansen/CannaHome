@@ -35,13 +35,13 @@ const PlantCard = (props) => {
                 <p className="text-sm">{plantingDate}</p>
                 
                 <Link to={`/edit-plant/${props.plant._id}`}>
-                    <button className="editplant-btn p-1 rounded border-2 border-amber-400 bg-amber-50">
+                    <button className="editplant-btn p-1 rounded border-2 border-amber-400 bg-amber-50 hover:bg-orange-100">
                     Edit
                     </button>
                 </Link>
                     <button 
                     onClick={() => props.deletePlant(props.plant._id)}
-                    className="deleteplant-btn p-1 m-1 rounded border-2 border-red-500 bg-red-50">
+                    className="deleteplant-btn p-1 m-1 rounded border-2 hover:bg-red-200 border-red-500 bg-red-50">
                         Delete
                     </button>
             </div>

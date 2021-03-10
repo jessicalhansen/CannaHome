@@ -18,7 +18,7 @@ body {
 }
 
 .nav-bar {
-    height: 7vh;
+    min-height: 7vh;
     background-color: white;
     border-bottom: 3px solid #0C8100;
 }
@@ -28,7 +28,7 @@ body {
 }
 
 #logo-img {
-    height: 6vh;
+    height: 60px;
 }
 
 .main-plant-area {
@@ -49,7 +49,6 @@ body {
     border: 3px solid #0C8100;
     box-sizing: border-box;
 }
-
 
 .plant-card {
     padding: 7px;
@@ -76,6 +75,7 @@ body {
 .newplant-form {
     border: 5px solid #65A30D;
 }
+
 .pltfrm {
     border: 1px solid #E7E5E4; 
 }
@@ -92,45 +92,16 @@ body {
     border: 3px solid #0C8100;
 }
 
-.plantdetail-area {
-
-}
-
-.plantdetail-card-area {
-
-}
-
-.plant-detail-card {
-
-}
-
 .plant-detail {
     height: 37vh;
-}
-
-.editplantbtn-area {
-
-}
-
-.editplant-btn {
-
-}
-
-.deleteplant-btn {
-
-}
-
-.plantnotes-area {
-
-}
-
-.plantnotes {
-
 }
 
 .waterings-area {
 
 }
+
+
+
 
 .add-water-btn {
     padding: 3px;

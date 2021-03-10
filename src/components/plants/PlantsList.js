@@ -4,7 +4,7 @@ const PlantsList = (props) => {
     const plants = props.plants.map((plantsObj) => {
         return (
             <div>
-                <div className="bg-lime-50 m-1">     
+                <div className="m-1">     
                     <PlantCard 
                     key={plantsObj._id} 
                     plant={plantsObj}
