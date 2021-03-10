@@ -6,6 +6,8 @@ class NewWateringPage extends React.Component {
         incNutrients: '',
     };
 
+
+
     handleNewWatering = (event) => {
         this.setState({
             ...this.state,
@@ -15,11 +17,10 @@ class NewWateringPage extends React.Component {
 
     handleSubmitWatering = (event) => {
         event.preventDefault();
-        // console.log(this.state);
         const wateringObj = {
             waterDate: this.state.waterDate,
             incNutrients: this.state.incNutrients,
-            plantId: this.props.plants.id,
+            // plantId: this.props.plants._id,
         };
         fetch('http://localhost:4000/api/v1/waterings', {
             method: 'POST',

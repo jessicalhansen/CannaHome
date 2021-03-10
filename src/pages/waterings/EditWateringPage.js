@@ -27,6 +27,8 @@ class EditWateringPage extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        console.log(this.props);
+        console.log('handle submit watering props ^^^^^^^^^^')
         fetch(`http://localhost:4000/api/v1/waterings/${this.props.match.params.id}`, {
             method: 'PUT',
             headers: {

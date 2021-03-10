@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 const WateringsCard = (props) => {
     console.log(props);
-
+    console.log('watering card props ^^^^^^^^')
     return (
         <>
             <div className="waterflex-area">
-                <div className="waterings-card rounded bg-rose-400">
+                <div className="waterings-card rounded bg-cyan-100 border-2 border-cyan-500">
                     <h2 className="text-xl">Date:</h2> 
                     <p>{props.watering.waterDate}</p>
                     <p>Included nutrients:</p>

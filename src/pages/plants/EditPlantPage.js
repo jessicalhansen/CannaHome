@@ -13,9 +13,6 @@ class EditPlantPage extends React.Component {
     };
 
     componentDidMount() {
-        console.log('Getting plant');
-        console.log(this.props);
-
         fetch(`http://localhost:4000/api/v1/plants/${this.props.match.params.id}`)
         .then((response) => {
             console.log(response);

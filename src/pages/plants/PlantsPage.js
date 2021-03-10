@@ -21,6 +21,24 @@ class PlantsPage extends React.Component {
         waterings: [],
     };
 
+    // componentDidMount() {
+    //     Promise.all(
+    //         []
+    //     )
+    //         fetch('http://localhost:4000/api/v1/plants')
+    //     .then((response) => response.json())
+    //     .then((jsonData) => {
+    //         console.log(jsonData);
+    //         this.setState({
+    //             ...this.state,
+    //             plants: jsonData,
+                
+    //         });
+    //     })
+    //     .catch((err) => console.log(err))
+    // }
+
+
     componentDidMount() {
         fetch('http://localhost:4000/api/v1/plants')
         .then((response) => response.json())
@@ -39,13 +57,14 @@ class PlantsPage extends React.Component {
         fetch(`http://localhost:4000/api/v1/plants/${data.id}`)
             .then((response) => response.json())
             .then((jsonData) => {
-                console.log(jsonData);
+                // console.log(jsonData);
                 this.setState({
                     ...this.state,
                     plant: data,
                     waterings: jsonData.waterings,
                 });
                 console.log(jsonData.waterings)
+                console.log('showplanthandler json data ^^^^^')
             })
             .catch((err) => {
                 console.log('Plant Handler Error');
@@ -54,7 +73,7 @@ class PlantsPage extends React.Component {
     };
 
     handleDeletePlant = (plantId) => {
-        console.log(plantId);
+        // console.log(plantId);
         let confirmed = window.confirm(
             'Are you sure you want to delete this plant?'
         );
@@ -103,8 +122,8 @@ class PlantsPage extends React.Component {
                         plant={this.state.plant}
                         deletePlant={this.handleDeletePlant}
                     />
-                    <div className="waterings-area text-center my-2 bg-cyan-200">
-                    <h2>Waterings Area</h2>
+                    <div className="waterings-area text-center my-2 flex flex-row flex-wrap">
+                
                     <WateringsList 
                         waterings={this.state.waterings}
                     />
