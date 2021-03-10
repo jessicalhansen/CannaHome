@@ -16,6 +16,7 @@ class PlantsPage extends React.Component {
             lightCycle: '',
             plantingDate: '',
             notes: '',
+            waterings: '',
         },
         waterings: [],
     };
@@ -28,6 +29,7 @@ class PlantsPage extends React.Component {
             this.setState({
                 ...this.state,
                 plants: jsonData,
+                
             });
         })
         .catch((err) => console.log(err))
@@ -43,6 +45,7 @@ class PlantsPage extends React.Component {
                     plant: data,
                     waterings: jsonData.waterings,
                 });
+                console.log(jsonData.waterings)
             })
             .catch((err) => {
                 console.log('Plant Handler Error');
@@ -74,7 +77,7 @@ class PlantsPage extends React.Component {
                 })
                 .catch((err) => console.log(err));
         }
-    }
+    };
 
     render() {
         return (

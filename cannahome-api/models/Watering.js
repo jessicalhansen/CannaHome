@@ -5,7 +5,7 @@ const wateringSchema = new mongoose.Schema(
         waterDate: {
             type: Date,
         },
-        incNutrients: Boolean,
+        incNutrients: String,
         plant: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Plant',

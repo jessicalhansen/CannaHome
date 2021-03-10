@@ -5,7 +5,7 @@ const WateringsList = (props) => {
     props.waterings.map((wateringsObj) => {
         return filteredWaterings.unshift(
             <WateringsCard
-                key={wateringsObj._id}
+                key={wateringsObj}
                 watering={wateringsObj}
             />
         )

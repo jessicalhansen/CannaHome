@@ -97,10 +97,13 @@ body {
 }
 
 .waterings-area {
-
+    height: 39%;
+    margin: 8px;
 }
 
-
+.waterings-card {
+    width: 30%
+}
 
 
 .add-water-btn {
