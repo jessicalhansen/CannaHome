@@ -1,7 +1,14 @@
 # CannaHome
 
 ### Scope: 
-Medicine should be accessible for all. As more states legalize medical and recreational use of cannabis, and federal decriminalization on the eventual horizon, more cannabis users are turning to supplying their own medicine. CannaHome provides users an easy and reliable way  to track their plants, watering schedule, and the nutrients provided in their routine. 
+Medicine should be accessible for all. As more states legalize medical and recreational use of cannabis, and federal decriminalization on the eventual horizon, more cannabis users are turning to supplying their own medicine. CannaHome provides users an easy and reliable way  to track their plants, watering schedule, and the nutrients provided in their routine. Grow your own at home!
+
+### Technologies Used:
+* MongoDB
+* Express
+* React
+* Node
+* TailwindCSS
 
 ### Entity Relationship Diagram(ERD):
 ![image](https://media.git.generalassemb.ly/user/32534/files/d7b62180-7b80-11eb-9929-8d3bb6a90809)
@@ -69,3 +76,6 @@ A user should be able to:
 ** Be redirected to their plant page after logging in. 
 * Add ability to add plant photos
 * Implement third party API to autofill and provide plant information. 
+
+### Unsolved problems:
+Completing the watering model connection is the largest unsolved problem. Once that is connected and working, adding a note model and getting that functional so that notes on individual plants are editable is another unsolved problem remaining. I will continue to work on all of the bonus features, since I did not get to any of them.
