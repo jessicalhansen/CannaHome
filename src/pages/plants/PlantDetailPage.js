@@ -6,6 +6,7 @@ const PlantDetailPage = (props) => {
                 <div className="plantdetail-card-area">
                     <PlantDetailCard
                     plant={props.plant}
+                    key={props.plant}
                     />
                 </div>
             </div>

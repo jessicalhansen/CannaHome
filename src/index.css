@@ -18,9 +18,17 @@ body {
 }
 
 .nav-bar {
-    min-height: 6vh;
+    height: 7vh;
     background-color: white;
     border-bottom: 3px solid #0C8100;
+}
+
+.plant-links {
+    padding-top: 1.3vh;
+}
+
+#logo-img {
+    height: 6vh;
 }
 
 .main-plant-area {
@@ -81,6 +89,7 @@ body {
 .main-plantdetail-area {
     height: 100%;
     width: 70%;
+    border: 3px solid #0C8100;
 }
 
 .plantdetail-area {
@@ -96,6 +105,18 @@ body {
 }
 
 .plant-detail {
+    height: 37vh;
+}
+
+.editplantbtn-area {
+
+}
+
+.editplant-btn {
+
+}
+
+.deleteplant-btn {
 
 }
 

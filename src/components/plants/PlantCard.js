@@ -23,19 +23,26 @@ const PlantCard = (props) => {
     const plantingDate = plantDate.toDateString();
     return (
         <>
-            <div className="plant-card bg-lime-100 text-center">
-                <h2 className="text-xl font-bold">{props.plant.plantName}</h2>
-                <p className="font-semibold">Grow stage: </p>
-                <p>{props.plant.growStage}</p>
-                <p className="font-semibold">Date planted: </p>
-                <p className="text-sm">{plantingDate}</p>
-                <Link to={`/plants/${props.plant._id}`}>
-                <button 
+        <Link to={`/plants/${props.plant._id}`}>
+            <div
                 onClick={displayPlant}
                 key={props.plant._id}
-                className="viewplant-btn bg-green-50 hover:bg-lime-400 rounded font-semibold">View Details</button>
+                className="plant-card bg-lime-100 text-center">
+                <h2 className="text-xl font-extrabold">{props.plant.plantName}</h2>
+                <p className="font-bold">Grow stage: </p>
+                <p>{props.plant.growStage}</p>
+                <p className="font-bold">Date planted: </p>
+                <p className="text-sm">{plantingDate}</p>
+                <Link to={`/edit-plant/${props.plant._id}`}>
+                    <button className="editplant-btn p-1 rounded border-2 border-amber-400 bg-amber-50">
+                    Edit
+                    </button>
+                    <button className="deleteplant-btn p-1 m-1 rounded border-2 border-red-500 bg-red-50">
+                        Delete
+                    </button>
                 </Link>
             </div>
+        </Link>
         </>
     );
 };

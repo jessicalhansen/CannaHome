@@ -39,7 +39,7 @@ class PlantsPage extends React.Component {
                 console.log(jsonData);
                 this.setState({
                     plant: data,
-                    // waterings: jsonData,
+                    waterings: jsonData,
                 });
             })
             .catch((err) => {

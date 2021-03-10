@@ -1,5 +1,6 @@
 import React from 'react';
-class NewPlantPage extends React.Component {
+
+class EditPlantPage extends React.Component {
     state = {
         plantName: '',
         plantType: '',
@@ -9,50 +10,50 @@ class NewPlantPage extends React.Component {
         lightCycle: '',
         plantingDate: '',
         notes: '',
-    }
+    };
 
-    newPlantHandler = (event) => {
+    componentDidMount() {
+        console.log('Getting plant');
+        console.log(this.props);
+
+        fetch(`http://localhost:4000/api/v1/plants/${this.props.match.params.id}`)
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        })
+        .then((jsonData) => {
+            console.log(jsonData);
+            this.setState(jsonData)
+        })
+        .catch((err) => console.log(err));
+    };
+
+    handleChange = (event) => {
         this.setState({
-            ...this.state,
             [event.target.id]: event.target.value
         });
     };
 
-    handleSubmitPlant = (event) => {
+    handleEditSubmit = (event) => {
         event.preventDefault();
-        const plantObj = {
-            plantName: this.state.plantName,
-            plantType: this.state.plantType,
-            plantStrain: this.state.plantStrain,
-            propagationType: this.state.propagationType,
-            growStage: this.state.growStage,
-            lightCycle: this.state.lightCycle,
-            plantingDate: this.state.plantingDate,
-            notes: this.state.notes,
-        };
-        fetch('http://localhost:4000/api/v1/plants', {
-            method: 'POST',
+        fetch(`http://localhost:4000/api/v1/plants/${this.props.match.params.id}`, {
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(plantObj),
+            body: JSON.stringify(this.state),
         })
-        .then((result) => {
-            return result.json(); 
-        })
-        .then((jsonData) => {
-            this.props.history.push('/plants');
-        })
+        .then(() => this.props.history.push('/plants'))
         .catch((err) => console.log(err));
     };
 
     render() {
         return (
             <div className="newplant-area text-center">
-                <h2 className="text-2xl font-medium m-2">Add A New Plant:</h2>
+                <h2 className="text-2xl font-medium m-2">Edit {this.state.plantName}</h2>
 
                 <div className="newplant-form-area">
-                    <form onSubmit={this.handleSubmitPlant} className="newplant-form text-center rounded bg-white">
+                    <form onSubmit={this.handleEditSubmit} className="newplant-form text-center rounded bg-white">
                         <div>
                             <label htmlFor="plantName">Plant Name:</label> <br />
                             <input 
@@ -61,7 +62,7 @@ class NewPlantPage extends React.Component {
                             id="plantName" 
                             name="plantName" 
                             value={this.state.plantName}
-                            onChange={this.newPlantHandler}
+                            onChange={this.handleChange}
                             required />
                         </div>
                         <div>
@@ -72,7 +73,7 @@ class NewPlantPage extends React.Component {
                             id="plantType" 
                             name="plantType" 
                             value={this.state.plantType}
-                            onChange={this.newPlantHandler} />
+                            onChange={this.handleChange} />
                         </div>
                         <div>
                             <label htmlFor="plantStrain">Plant Strain:</label> <br />
@@ -82,7 +83,7 @@ class NewPlantPage extends React.Component {
                             id="plantStrain" 
                             name="plantStrain" 
                             value={this.state.plantStrain}
-                            onChange={this.newPlantHandler} />
+                            onChange={this.handleChange} />
                         </div>
                         <div>
                             <label htmlFor="propagationType">Propagation Type:</label> <br />
@@ -92,7 +93,7 @@ class NewPlantPage extends React.Component {
                             id="propagationType" 
                             name="propagationType" 
                             value={this.state.propagationType}
-                            onChange={this.newPlantHandler} />
+                            onChange={this.handleChange} />
                         </div>
                         <div>
                             <label htmlFor="growStage">Grow Stage:</label> <br />
@@ -102,7 +103,7 @@ class NewPlantPage extends React.Component {
                             id="growStage" 
                             name="growStage" 
                             value={this.state.growStage}
-                            onChange={this.newPlantHandler} />
+                            onChange={this.handleChange} />
                         </div>
                         <div>
                             <label htmlFor="lightCycle">Light Cycle:</label> <br />
@@ -112,7 +113,7 @@ class NewPlantPage extends React.Component {
                             id="lightCycle" 
                             name="lightCycle" 
                             value={this.state.lightCycle}
-                            onChange={this.newPlantHandler} />
+                            onChange={this.handleChange} />
                         </div>
                         <div>
                             <label htmlFor="plantingDate">Date Planted:</label> <br />
@@ -122,7 +123,7 @@ class NewPlantPage extends React.Component {
                             id="plantingDate" 
                             name="plantingDate" 
                             value={this.state.plantingDate}
-                            onChange={this.newPlantHandler} />
+                            onChange={this.handleChange} />
                         </div>
                         <div>
                             <label htmlFor="notes">Notes:</label> <br />
@@ -132,14 +133,14 @@ class NewPlantPage extends React.Component {
                             id="notes" 
                             name="notes" 
                             value={this.state.notes}
-                            onChange={this.newPlantHandler} />
+                            onChange={this.handleChange} />
                         </div>
-                        <button className="newplant-btn rounded bg-lime-200 hover:bg-primary hover:text-white">Add New Plant</button>
+                        <button type="submit" className="newplant-btn rounded bg-lime-200 hover:bg-primary hover:text-white">Update Plant</button>
                     </form>
                 </div>
             </div>
         )
     }
-}
+};
 
-export default NewPlantPage;
+export default EditPlantPage;
