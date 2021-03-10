@@ -64,8 +64,8 @@ class PlantsPage extends React.Component {
                         </div>
                     </div>
                 <div className="main-plantdetail-area bg-rose-400 ml-1 mr-2 rounded">
-                    <h2 className="text-3xl">
-                        Details for: {this.state.plant.plantName}
+                    <h2 className="text-3xl text-center m-2 underline">
+                        Plant Details
                     </h2>
                     <PlantDetailPage 
                         plant={this.state.plant}
