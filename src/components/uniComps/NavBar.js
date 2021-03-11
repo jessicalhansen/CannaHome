@@ -11,7 +11,7 @@ function NavBar () {
                     className="logo pt-1 mx-0 text-4xl font-bold">
                         <div className="flex">
                             <img src={logo} alt="CannaHome" id="logo-img" />
-                            <h1 className="my-2">CannaHome</h1>
+                            <h1 className="my-4">CannaHome</h1>
                         </div>
                         
                     </NavLink>
