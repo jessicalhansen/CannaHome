@@ -80,9 +80,20 @@ class PlantsPage extends React.Component {
         }
     };
 
-    // handleRerender = (plantId) => {
-    //     fetch(`http://localhost`)
-    // }
+    handleRerender = (plantId) => {
+        fetch(`http://localhost:4000/api/v1/plants/${plantId}`)
+            .then((res) => {
+                return res.json();
+            })
+            .then((jsonData) => {
+                console.log(jsonData);
+                this.setState({
+                    ...this.state, 
+                    plants: jsonData,
+                });
+            })
+            .catch((err) => console.log(err));
+    }
 
     render() {
         return (

@@ -18,7 +18,7 @@ const show = (req, res) => {
     db.Plant.findOne({ _id: req.params.id})
     .populate("waterings")
     .exec((err, waterings) => {
-        console.log("Populated plant " + waterings);
+        // console.log("Populated plant " + waterings);
         return res.json(waterings);
     });
 }
