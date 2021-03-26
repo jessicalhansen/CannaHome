@@ -8,6 +8,7 @@ const PlantDetailPage = (props) => {
                     plant={props.plant}
                     key={props.plant._id}
                     deletePlant={props.deletePlant}
+                    handleRerender={props.handleRerender}
                     />
                 </div>
             </div>

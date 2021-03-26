@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 
 const WateringsCard = (props) => {
-    console.log(props);
-    console.log('watering card props ^^^^^^^^')
+    const waterDate = new Date(props.watering.waterDate);
+    const wateringDate = waterDate.toDateString();
+
     return (
         <>
             <div className="waterflex-area">
                 <div className="waterings-card rounded bg-cyan-100 border-2 border-cyan-500">
                     <h2 className="text-xl">Date:</h2> 
-                    <p>{props.watering.waterDate}</p>
+                    <p>{wateringDate}</p>
                     <p>Included nutrients:</p>
                     <p>{props.watering.incNutrients}</p>
                 <div className="wateringsbtn-area flex justify-around">

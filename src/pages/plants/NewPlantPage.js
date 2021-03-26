@@ -29,6 +29,7 @@ class NewPlantPage extends React.Component {
             lightCycle: this.state.lightCycle,
             plantingDate: this.state.plantingDate,
             notes: this.state.notes,
+            waterings: this.state.watering,
         };
         fetch('http://localhost:4000/api/v1/plants', {
             method: 'POST',
