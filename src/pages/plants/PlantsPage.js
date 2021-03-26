@@ -80,6 +80,10 @@ class PlantsPage extends React.Component {
         }
     };
 
+    // handleRerender = (plantId) => {
+    //     fetch(`http://localhost`)
+    // }
+
     render() {
         return (
             <div className="main-plant-area py-5 px-1">

@@ -7,12 +7,21 @@ const index = (req, res) => {
     });
 };
 
+// const show = (req, res) => {
+//     db.Plant.findById(req.params.id, (err, foundPlant) => {
+//         if (err) return console.log(err);
+//         return res.json(foundPlant);
+//     });
+// };
+
 const show = (req, res) => {
-    db.Plant.findById(req.params.id, (err, foundPlant) => {
-        if (err) return console.log(err);
-        return res.json(foundPlant);
+    db.Plant.findOne({ _id: req.params.id})
+    .populate("waterings")
+    .exec((err, waterings) => {
+        console.log("Populated plant " + waterings);
+        return res.json(waterings);
     });
-};
+}
 
 const create = (req, res) => {
     console.log(req.body);
