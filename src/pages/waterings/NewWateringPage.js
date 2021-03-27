@@ -28,17 +28,27 @@ class NewWateringPage extends React.Component {
             },
             body: JSON.stringify(wateringObj),
         })
-        .then((response) => {
-            console.log(response)
-            return response.json();
-        })
-        .then((jsonData) => {
-            console.log(jsonData);
-            this.props.history.push('/waterings');
-        })
-        .catch((err) => {
-            console.log(err)
-        });
+            .then((response) => {
+                console.log(response)
+                return response.json();
+            })
+            .then((jsonData) => {
+                console.log(jsonData);
+                this.props.history.push('/waterings');
+            });
+                fetch(`http://localhost:4000/api/v1/plants`)
+                    .then((res) => {
+                        return res.json();
+                    })
+                    .then((jsonData) => {
+                        this.setState({
+                            ...this.state,
+                            watering: jsonData,
+                        })
+                    })
+            .catch((err) => {
+                console.log(err)
+            });
     }
 
     render() {

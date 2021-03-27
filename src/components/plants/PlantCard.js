@@ -45,7 +45,8 @@ const PlantCard = (props) => {
                     className="deleteplant-btn p-1 m-1 rounded border-2 hover:bg-red-200 border-red-500 bg-red-50">
                         Delete
                     </button>
-                    <Link to="/new-watering">
+                    {/* <Link to="/new-watering"> */}
+                    <Link to={`/plants/${props.plant._id}/new-watering`}>
                         <div className="addwtrbtn-area">
                             <button className="add-water-btn bg-cyan-50 hover:bg-lightBlue-400 rounded font-semibold">Add Watering</button>
                         </div>

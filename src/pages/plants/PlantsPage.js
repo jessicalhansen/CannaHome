@@ -109,6 +109,7 @@ class PlantsPage extends React.Component {
                             showPlantHandler={this.showPlantHandler}
                             deletePlant={this.handleDeletePlant}
                             handleRerender={this.handleRerender}
+                            waterings={this.state.waterings}
                         />
                         </div>
                     </div>
@@ -120,11 +121,13 @@ class PlantsPage extends React.Component {
                         plant={this.state.plant}
                         deletePlant={this.handleDeletePlant}
                         handleRerender={this.handleRerender}
+                        waterings={this.state.waterings}
                     />
                     <div className="waterings-area text-center my-2 flex flex-row flex-wrap">
                 
                     <WateringsList 
                         waterings={this.state.waterings}
+                        plants={this.state.plants}
                     />
                     </div>
                 </div>

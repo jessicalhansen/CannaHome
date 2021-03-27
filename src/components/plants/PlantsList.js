@@ -10,6 +10,7 @@ const PlantsList = (props) => {
                     plant={plantsObj}
                     showPlantHandler={props.showPlantHandler} 
                     deletePlant={props.deletePlant}
+                    waterings={props.waterings}
                 />
                 </div> 
             </div>
