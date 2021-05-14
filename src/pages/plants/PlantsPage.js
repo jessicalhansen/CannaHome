@@ -86,13 +86,13 @@ class PlantsPage extends React.Component {
                 return res.json();
             })
             .then((jsonData) => {
-                console.log(jsonData);
+                console.log(jsonData)
                 this.setState({
                     ...this.state, 
                     plants: jsonData,
                 });
             })
-            .catch((err) => console.log(err));
+            .catch((err) => console.log(err))
     }
 
     render() {
