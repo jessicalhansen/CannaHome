@@ -81,4 +81,4 @@ A user should be able to:
 * Implement third party API to autofill and provide plant information. 
 
 ### Unsolved problems:
-Completing the watering model connection is the largest unsolved problem. Once that is connected and working, adding a note model and getting that functional so that notes on individual plants are editable is another unsolved problem remaining. I will continue to work on all of the bonus features, since I did not get to any of them.
+Currently working on Watering create feature to link properly to correct plant ID. Looking to change from class state management to hooks and using GraphQL API. I will continue to work on all of the bonus features, since I did not get to any of them.

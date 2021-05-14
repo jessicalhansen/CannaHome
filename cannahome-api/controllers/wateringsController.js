@@ -14,23 +14,30 @@ const show = (req, res) => {
     });
 };
 
+// const create = (req, res) => {
+//     console.log(req.body);
+//     db.Watering.create(req.body, (err, newWatering) => {
+//         if (err) return console.log(err);
+//         db.Plant.findByIdAndUpdate(
+//             req.body.plant,
+//             {
+//                 $push: {waterings: newWatering._id}
+//             },
+//             {new: true},
+//             ((err, updatedPlant) => {
+//                 if (err) return console.log(err);
+//                 return res.json(newWatering);
+//             })
+//         )
+//     });
+// };
+
 const create = (req, res) => {
     console.log(req.body);
-    db.Watering.create(req.body, (err, newWatering) => {
-        if (err) return console.log(err);
-        db.Plant.findByIdAndUpdate(
-            req.body.plant,
-            {
-                $push: {waterings: newWatering._id}
-            },
-            {new: true},
-            ((err, updatedPlant) => {
-                if (err) return console.log(err);
-                return res.json(newWatering);
-            })
-        )
-    });
-};
+    const watering = {
+        
+    }
+}
 
 const update = (req, res) => {
     db.Watering.findByIdAndUpdate(

@@ -17,7 +17,7 @@ class Routes extends React.Component {
                 <Route path="/new-plant" component={NewPlantPage} />
                 <Route path="/plants/:id" component={PlantsPage} />
                 <Route path="/edit-plant/:id" component={EditPlantPage} />
-                <Route path="/plants/:id/new-watering" component={NewWateringPage} />
+                <Route path="/new-watering" component={NewWateringPage} />
                 <Route path="/edit-watering/:id" component={EditWateringPage} />
             </Switch>
             </>
